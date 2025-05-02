@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Apphive Editor Clone</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Apphive Editor Clone</h1>
+    <div>
+      <input type="file" id="loadFile" />
+      <button onclick="saveProject()">Guardar</button>
+    </div>
+  </header>
+
+  <div class="container">
+    <aside class="sidebar">
+      <h3>Componentes</h3>
+      <div draggable="true" class="draggable" data-type="text">Texto</div>
+      <div draggable="true" class="draggable" data-type="button">Botón</div>
+      <div draggable="true" class="draggable" data-type="image">Imagen</div>
+      <div draggable="true" class="draggable" data-type="input">Input</div>
+      <div draggable="true" class="draggable" data-type="container">Contenedor</div>
+    </aside>
+
+    <main id="canvas" class="canvas" ondragover="event.preventDefault()" ondrop="drop(event)">
+      <p class="placeholder">Arrastra un componente aquí</p>
+    </main>
+
+    <aside class="properties">
+      <h3>Propiedades</h3>
+      <div id="propsContainer">
+        <p>Selecciona un componente</p>
+      </div>
+    </aside>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
